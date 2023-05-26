@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookai</title>
+    <script src="api.js"></script>
+    <script src="mypage.js"></script>
+    <link href="styles/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form>
+        <!-- 헤더부분 -->
+        <div class="nav_">
+            <div class="nav_sign">
+                <!-- <a href="/main.html"><img id="container_img" src="https://i.postimg.cc/fTxSP8Bc/cookai.png"
+                        alt="로고"></a> -->
+                <!--로그인 전 버튼들-->
+                <div id="loginContainer">
+                    <div class="href_a">
+                        <div class="sign_a">
+                            <a href="signup.html">회원가입</a>
+                        </div>
+                        <div class="sign_a">
+                            <a href="login.html">로그인</a>
+                        </div>
+                    </div>
+                </div>
+                <!--로그인 후 버튼들-->
+                <div id="loggedInContainer">
+                    <div class="href_a">
+                        <div class="sign_a">
+                            <a href="mypage.html">마이페이지</a>
+                        </div>
+                        <div class="sign_a">
+                            <a href="#">게시글 작성</a>
+                        </div>
+                        <div class="sign_a">
+                            <button type="button" onclick="handleLogout()">logout</button>
+                        </div>
+                    </div>
+                    <div class="href_a">
+                        <!-- 닉네임으로 바꿀것임 -->
+                        <div style="color: green;" id="my_email"></div>
+                        <div>님 반갑습니다.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 검색 -->
+        <!-- <div>
+            <input type="file" name="search" accept="image/*">
+            <input type="submit">
+        </div> -->
+
+
+
+    </form>
+</body>
+
+</html>

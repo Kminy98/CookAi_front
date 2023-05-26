@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookai</title>
+    <script src="mypage.js"></script>
+    <link href="styles/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--로고-->
+    <div class="nav_main_mypage">
+        <a href="/main.html"><img id="container_img" src="https://i.postimg.cc/fTxSP8Bc/cookai.png" alt="로고"></a>
+    </div>
+
+    <div class="mypage_div" id="mypage_div_info">
+        <!--내정보-->
+        <div class="mypage_title" style="color: white;">내 정보</div>
+        <div class="mypage_content">
+            <div style="color: white;">email: </div>
+            <div style="color: orange; font-weight: 600;" id="my_email"></div>
+        </div>
+        <div class="mypage_content">
+            <div style="color: white;">username: </div>
+            <div style="color: orangered;" id="my_username"></div>
+        </div>
+    </div>
+
+    <div class="mypage_div" id="mypage_div_write">
+        <!--내가 쓴 글-->
+        <div class="mypage_title">내 게시글</div>
+        {% for post in posts %}
+        <div class="mypage_content">
+            <div>제목<h3>{{ post.title }}</h3></div>
+            <div>내용<p>{{ post.content }}</p></div>
+        </div>
+        {% empty %}
+        <p>게시글이 없습니다.</p>
+        {% endfor %}
+    </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+}
+/*loginout*/
+#loginContainer {
+    display: block;
+}
+
+#loggedInContainer {
+    display: block;
+}
+
+/*base*/
+.nav_main {
+    background-color: rgb(255, 255, 145);
+    display: flex;
+    width: 100%;
+    /*div 가운데 정렬*/
+    text-align: center;
+    justify-content: space-around;
+}
+
+.nav_main img {
+    width: 60%;
+    margin-left: 55%;
+
+}
+
+.hello {
+    display: flex;
+}
+
+.href_a {
+    display: flex;
+}
+
+.href_a div {
+    font-size: 20px;
+    color: orangered;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.sign_a {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.sign_a a {
+    font-size: 20px;
+    color: orangered;
+    font-weight: 600;
+    text-decoration-line: none;
+}
+
+.sign_a a:hover {
+    font-size: 20px;
+    color: green;
+    font-weight: 600;
+}
+
+.sign_a button {
+    font-size: 20px;
+    color: orangered;
+    background-color: rgb(255, 255, 255, 0);
+    border: none;
+    font-weight: 600;
+}
+.sign_a button:hover {
+    font-size: 20px;
+    color: green;
+    font-weight: 600;
+}
+
+
+/*signup*/
+#container_img {
+    width: 300px;
+    margin-left: 41vw;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.sign_ {
+    padding:30px;
+    width: 30%;
+    border: dashed 3px yellowgreen;
+    border-radius: 10%;
+
+
+    margin: auto;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: orangered;
+    font-size: 50px;
+}
+
+.signup_ {
+    width: 60%;
+    margin: auto;
+}
+
+.signup_input {
+    /*div 가운데 정렬*/
+    text-align: center;
+}
+
+.signup_input div {
+    margin: 30px;
+}
+
+.signup_input input {
+    font-size: 120%;
+    text-align: center;
+    border-color: yellowgreen;
+}
+
+#send_mail {
+    text-align: center;
+    width: 249px;
+    font-size: 15px;
+    background-color: green;
+
+    color: white;
+    font-weight: 400;
+}
+
+.signup_btn {
+    text-align: center;
+}
+
+.signup_btn button{
+    text-align: center;
+    margin-left: 15px;
+    width: 249px;
+    font-size: 20px;
+    background-color: yellowgreen;
+    border-color: yellowgreen;
+    color: orangered;
+    font-weight: 400;
+}
+
+/*login*/
+#container_img {
+    width: 300px;
+    margin-left: 41vw;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.sign_ {
+    padding:30px;
+    width: 30%;
+    border: dashed 3px yellowgreen;
+    border-radius: 10%;
+
+
+    margin: auto;
+    margin-top: 50px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: orangered;
+    font-size: 50px;
+}
+
+.login_ {
+    width: 60%;
+    margin: auto;
+}
+
+.login_input {
+    /*div 가운데 정렬*/
+    text-align: center;
+}
+
+.login_input div {
+    margin: 30px;
+}
+
+.login_input input {
+    font-size: 120%;
+    text-align: center;
+    border-color: yellowgreen;
+}
+
+.login_btn {
+    text-align: center;
+
+}
+
+.login_btn button {
+    text-align: center;
+    margin-left: 15px;
+    width: 249px;
+    font-size: 20px;
+    background-color: yellowgreen;
+    border-color: yellowgreen;
+    color: orangered;
+    font-weight: 400;
+}
+
+/*mypage*/
+.nav_main_mypage {
+    background-color: rgb(255, 255, 145);
+    display: flex;
+    width: 100%;
+    /*div 가운데 정렬*/
+    text-align: center;
+    justify-content: space-around;
+}
+
+.nav_main_mypage img {
+    width: 60%;
+    margin-left: 100px;
+}
+
+#mypage_div_info {
+    background-color: rgb(62, 168, 62);
+}
+
+.mypage_div {
+    /*세로로 정렬*/
+    display: inline-block;
+    vertical-align: top;
+    padding: 40px;
+    width: 300px;
+    height: 100vw;
+}
+
+#mypage_div_write {
+    width: 1100px;
+    text-align: center;
+}
+
+.mypage_title {
+    color: green;
+    font-size: 30px;
+    margin: 20px;
+    margin-left: 100px;
+}
+
+.mypage_content {
+    display: flex;
+}
+
+.mypage_content div {
+    font-size: 20px;
+    color: green;
+    margin-left: 20px;
+}
+
+/*main*/
+.nav_sign {
+    display: flex;
+    float: right;
+    width: 30%;
+    /*div 가운데 정렬*/
+    text-align: center;
+    justify-content: space-around;
+}

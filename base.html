@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookai</title>
+    <script src="api.js"></script>
+    <script src="mypage.js"></script>
+    <link href="styles/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form>
+        <div class="nav_">
+
+            <div class="nav_main">
+                <a href="/main"><img id="container_img" src="https://i.postimg.cc/fTxSP8Bc/cookai.png" alt="로고"></a>
+                <div class="href_a">
+                    <div class="sign_a">
+                        <a href="signup.html">회원가입</a>
+                    </div>
+                    <div class="sign_a">
+                        <a href="login.html">로그인</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--로그인 후 버튼들-->
+            <div class="href_a">
+                <!-- 닉네임으로 바꿀것임 -->
+                <div style="color: green;" id="my_email"></div>
+                <div>님 반갑습니다.</div>
+
+                <div class="sign_a">
+                    <a href="mypage.html">마이페이지</a>
+                </div>
+                <div class="sign_a">
+                    <a href="#">게시글 작성</a>
+                </div>
+                <div class="sign_a">
+                    <button type="button" onclick="handleLogout()">logout</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
