@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <script src="scripts/api.js"></script>
+    <script src="scripts/mypage.js"></script>
+    <script src="scripts/article.js"></script>
+    <script src="scripts/article_create.js"></script>
+    <link href="styles/article_create.css" rel="stylesheet" />
+    <title>COOKAI</title>
+
+</head>
+
+<body>
+    <div class="logo">
+        <a href="/main.html"><img id="logo" src="https://i.postimg.cc/fTxSP8Bc/cookai.png" alt="로고"></a>
+    </div>
+
+    <!-- 게시글쓰기 -->
+    <div class="wrap_content">
+        <div class="wrap">
+            <h2 class="title-center">게시글 작성</h2>
+
+            <!-- <form class="form-area" enctype="multipart/form-data" method="post" action="{% url 'post_create' %}"> -->
+                <form>
+                <div class="form-group mt-2 mb-2" id="title">
+                    <label for="username">제목</label>
+                    <input type="text" id="title" class="title" name="title">
+                </div>
+
+                <hr>
+
+                <label style="font-size: 20px;">이미지</label>
+                <div class="image">
+                    <input type="file" id="image" class="image" name="image">
+                </div>
+
+                <label style="font-size: 20px;">게시글</label>
+                <div class="context" id="context">
+                    <textarea class="form-control" placeholder="게시글을 작성해주세요." id="floatingTextarea2"
+                        name="post"></textarea>
+                </div>
+
+                <hr>
+
+                <div class="form-actions">
+                    <button type="button" class="btn_create_article" onclick="createArticle()">등록하기</button>
+                    <a href="/main.html" class="btn_cancel">취소하기</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</html>

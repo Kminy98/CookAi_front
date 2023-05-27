@@ -1,28 +1,15 @@
 window.onload = () => {
-    // // 로그인 로그아웃에 따라 style 변화주기
-    // console.log("실행")
-    // let isLog = false;
-    // const access_null = localStorage.getItem("access") !== null;
-    // if (access_null) {
-    //     isLog = true;
-    //     console.log("access와 refresh가 로컬 저장소에 저장되어 있습니다.");
-    //     document.getElementById('loginContainer').style.display = 'none';
-    //     document.getElementById('loggedInContainer').style.display = 'block';
-    // } else {
-    //     isLog = false;
-    //     console.log("access와 refresh가 로컬 저장소에 저장되어 있지않습니다.");
-    //     document.getElementById('loginContainer').style.display = 'block';
-    //     document.getElementById('loggedInContainer').style.display = 'none';
-    // }
+
 }
 /*회원가입*/
-async function handleSignup() {
+/*정보저장*/
+async function saveMail() {
     const username = document.getElementById("username").value
     const email = document.getElementById("email").value
     // const check_email = document.getElementById("check_email").value
     const password = document.getElementById("password").value
     const password_check = document.getElementById("password_check").value
-    
+
 
     const error = document.getElementById("error")
 
@@ -40,33 +27,45 @@ async function handleSignup() {
         })
     })
     console.log(response)
+
+    // 에러메시지
+    const response_json = await response.json()
+    const err = response_json.message
+    console.log(err)
+
+
+    if (response.status == 400) {
+        alert(err)
+    }
+    else {
         /*비밀번호 확인*/
         if (username == "" || email == "" || password == "") {
             alert("빈칸이 있습니다")
         }
+
+        // 중복도아니고 빈칸도 없고 비번도 맞으면
         else if (password === password_check) {
+            // 이메일 인증 되어있는지 확인
             if (response.status == 201) {
-                alert("회원가입이 완료되었습니다.")
-                window.location.replace('main.html')
+                alert("email 발송! email 확인하여 인증 성공 시 가입 완료")
+                handleLogout()
+                window.location.replace('login.html')
             }
-        }
-        else {
-            alert("중복된 이메일,,,,,")
-        }
-    }
+
+        } 
+    } 
+} 
 
 
-/*이메일인증*/
-// async function sendMail(){
+
+
+
+// /*인증확인*/
+// async function handleSignup() {
+//     // 입력된 이메일 가져와
 //     const email = document.getElementById("email").value
 
-//     /*비밀번호 확인*/
-//     if (email === "") {
-//         alert("이메일 입력은 필수 입니다.");
-//         return;
-//     }
-
-//     const response = await fetch('http://127.0.0.1:8000/users/sendemail/', {
+//     const response = await fetch('http://127.0.0.1:8000/users/signup/', {
 //         headers:{
 //             'content-type':'application/json',
 //         },
@@ -75,12 +74,23 @@ async function handleSignup() {
 //             "email":email,
 //         })
 //     })
-//     console.log(response)
 
-//     if (response.status == 200) {
-//         alert("메일 발송 완료. 메일을 열어 인증을 완료하세요.")
+//         // 인증되어있는지 확인
+//         localStorage.setItem("payload", jsonPayload);
+//         const payload = localStorage.getItem("payload")
+//         const is_active = JSON.parse(payload).is_active
+//         console.log("is_active", is_active)
+    
+//         if (is_active) {
+//             alert("가입이 완료되었습니다.")
+//         }
+
+//     if (user) {
+//       const isActive = user.is_active;
+//       console.log(isActive);  // 사용자의 is_active 값을 출력
 //     }
-// }
+// } //handleSignup()
+
 
 // function validateEmail(email) {
 //     var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -97,9 +107,10 @@ async function handleSignup() {
 
 
 
+
 /*로그인*/
 async function handleLogin() {
-    console.log("눌림")
+    console.log("handleLogin()")
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
     console.log(email, password)
@@ -132,12 +143,18 @@ async function handleLogin() {
         // const get_access = localStorage.getItem('access');
         // console.log(get_access);
 
+        // 인증되어있는지 확인
         localStorage.setItem("payload", jsonPayload);
-        alert("환영합니다.")
-        window.location.replace('main.html')
+        const payload = localStorage.getItem("payload")
+        const is_active = JSON.parse(payload).is_active
+        console.log("is_active", is_active)
+        if (is_active) {
+            alert("환영합니다.")
+            window.location.replace('main.html')
+        }
         // window.location.replace(`${frontend_base_url}/`)
     } else {
-        alert("회원정보가 일치하지 않습니다.")
+        alert("인증이 완료되지않았거나 가입되지않은 이메일입니다.")
     }
 }
 
@@ -171,6 +188,6 @@ async function EnterLogin() {
 // 회원가입 엔터키
 async function EnterSignup() {
     if (window.event.keyCode == 13) {
-        handleSignup();
+        saveMail();
     }
 }

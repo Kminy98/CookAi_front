@@ -6,60 +6,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cookai</title>
-    <script src="api.js"></script>
-    <script src="mypage.js"></script>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/mypage.js"></script>
     <link href="styles/style.css" rel="stylesheet" />
 </head>
 
 <body>
     <form>
-        <!-- 헤더부분 -->
-        <div class="nav_">
-            <div class="nav_sign">
-                <!-- <a href="/main.html"><img id="container_img" src="https://i.postimg.cc/fTxSP8Bc/cookai.png"
+        <div class="main_div">
+            <!-- 헤더부분 -->
+            <div>
+                <div>
+                    <!-- <a href="/main.html"><img id="container_img" src="https://i.postimg.cc/fTxSP8Bc/cookai.png"
                         alt="로고"></a> -->
-                <!--로그인 전 버튼들-->
-                <div id="loginContainer">
-                    <div class="href_a">
-                        <div class="sign_a">
-                            <a href="signup.html">회원가입</a>
-                        </div>
-                        <div class="sign_a">
-                            <a href="login.html">로그인</a>
-                        </div>
-                    </div>
-                </div>
-                <!--로그인 후 버튼들-->
-                <div id="loggedInContainer">
-                    <div class="href_a">
-                        <div class="sign_a">
-                            <a href="mypage.html">마이페이지</a>
-                        </div>
-                        <div class="sign_a">
-                            <a href="#">게시글 작성</a>
-                        </div>
-                        <div class="sign_a">
-                            <button type="button" onclick="handleLogout()">logout</button>
+                    <!--로그인 전 버튼들-->
+                    <div class="nav_">
+                        <div class="nav_sign" id="loginContainer">
+                            <div class="href_a">
+                                <div class="sign_a">
+                                    <a href="signup.html">회원가입</a>
+                                </div>
+                                <div class="sign_a">
+                                    <a href="login.html">로그인</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="href_a">
-                        <!-- 닉네임으로 바꿀것임 -->
-                        <div style="color: green;" id="my_email"></div>
-                        <div>님 반갑습니다.</div>
+                    <!--로그인 후 버튼들-->
+                    <div class="nav_">
+                        <div class="nav_sign" id="loggedInContainer">
+                            <div class="href_a">
+                                <div class="sign_a" id="article_admin">
+                                    <a href="article_admin.html">게시글 보기</a>
+                                </div>
+                                <div class="href_a" id="href_right">
+                                    <div class="sign_a">
+                                        <a href="mypage.html">마이페이지</a>
+                                    </div>
+                                    <div class="sign_a">
+                                        <a href="article_create.html" id="article_create">게시글 작성</a>
+                                    </div>
+                                    <div class="sign_a">
+                                        <button type="button" onclick="handleLogout()">logout</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="href_a" id="hello">
+                                <!-- 닉네임으로 바꿀것임 -->
+                                <div style="color: green;" id="my_email"></div>
+                                <div>님 반갑습니다.</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 검색 -->
-        <!-- <div>
+            <!-- 검색 -->
+            <!-- <div>
             <input type="file" name="search" accept="image/*">
             <input type="submit">
         </div> -->
-
-
-
+            <div>
+                <a href="/main.html"><img id="logo" src="https://i.postimg.cc/fTxSP8Bc/cookai.png" alt="로고"></a>
+            </div>
     </form>
+
+
+    <!-- 검색 -->
+    <div class="container">
+        <form action="https://www.google.com/search" method="GET" class="search-form">
+            <label for="file" class="file-label"></label>
+            <div class="file-input-wrapper">
+                <input type="file" name="file" id="file" class="file-input">
+                <span class="file-button">사진 선택</span>
+                <span class="file-name">배고프다, 뭐먹지?</span>
+            </div>
+            <input type="submit" value="검색" class="search-btn">
+        </form>
+    </div>
+
+
+    <!-- 하단바 -->
+    <!-- <div class="jumbotron text-center mt-5 mb-0">
+        <footer class="py-5 bg-dark">
+            <h3 class="m-0 text-center" style="color: rgb(252,157,104)">COOKAI by Pay8</h3>
+        </footer>
+    </div> -->
+
 </body>
 
 </html>

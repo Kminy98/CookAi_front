@@ -1,0 +1,143 @@
+* {
+    font-family: 'S-CoreDream-3Light';
+}
+
+
+/*전체 공간*/
+.wrap_content {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgb(256, 252, 140);
+}
+
+/*작성 공간*/
+.wrap {
+    max-width: 700px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/*게시글 작성*/
+.title-center {
+    text-align: center;
+    color: black;
+}
+
+/*타이틀 빼고 작성공간*/
+.form-area {
+    margin-top: 20px;
+}
+
+/*제목*/
+.form-group {
+    margin-bottom: 10px;
+    color: black;
+}
+
+/*choose file*/
+.image {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+input[type="file"]::file-selector-button {
+    /* CSS styles for "Choose File" button */
+    display: inline-block;
+    padding: 10px 20px;
+    color: darkgray;
+    background-color: rgb(242, 237, 237);
+    border-color: rgb(242, 237, 237);
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+input[type="file"]::file-selector-value {
+    /* CSS styles for "No file chosen" text */
+    color: red;
+    font-style: italic;
+}
+
+/*글 작성 공간*/
+textarea {
+    height: 100px;
+    width: 100%;
+    resize: vertical;
+}
+
+/*줄*/
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 5px solid rgb(252, 155, 62);
+}
+
+label {
+    color: darkslategray;
+    font-weight: bold
+}
+
+.btn_create_article {
+    background-color: rgb(252, 155, 62);
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 13px;
+    border-color: none;
+}
+
+.btn_cancel {
+    background-color: lightgray;
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 13px;
+
+}
+
+/* display: inline-block;
+padding: 10px 20px;
+color: darkgray;
+background-color: rgb(242, 237, 237);
+border-color: rgb(242, 237, 237);
+border-radius: 25px;
+cursor: pointer;
+font-size: 16px;
+margin-left: 10px;
+} */
+
+#logo {
+    width: 20%;
+}
+
+.title-center {
+    font-size: 30px;
+    color: rgb(148, 119, 108);
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#title {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+#image {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#context {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.form-actions {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
