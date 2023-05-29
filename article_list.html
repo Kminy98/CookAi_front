@@ -1,0 +1,31 @@
+<!-- 게시글 전체 불러오기 페이지 (list.html) :
+제목과 검색 필터, 작성 버튼
+게시글 카드 및 게시글에 대한 목록 (제목, 작성자, 작성일)
+페이징 또는 무한 스크롤 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/article.js"></script>
+    <title>게시물 리스트</title>
+</head>
+<body id="ArticleListPage">
+    <h1>게시글 전체 불러오기</h1>
+
+    <div>
+        <input type="text" id="search" placeholder="검색" />
+        <button id="create-post-button">새 게시글 작성</button>
+    </div>
+
+    <div id="article-list">
+        <!-- 사용자에게 게시물이 표시되는 영역 -->
+    </div>
+
+    <div id="pagination">
+        <!-- 페이지네이션 및 무한 스크롤 버튼 -->
+    </div>
+</body>
+</html>

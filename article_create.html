@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -27,30 +27,23 @@
         <div class="wrap">
             <h2 class="title-center">게시글 작성</h2>
 
-            <!-- <form class="form-area" enctype="multipart/form-data" method="post" action="{% url 'post_create' %}"> -->
-                <form>
-                <div class="form-group mt-2 mb-2" id="title">
-                    <label for="username">제목</label>
-                    <input type="text" id="title" class="title" name="title">
-                </div>
-
-                <hr>
-
-                <label style="font-size: 20px;">이미지</label>
-                <div class="image">
-                    <input type="file" id="image" class="image" name="image">
-                </div>
-
-                <label style="font-size: 20px;">게시글</label>
-                <div class="context" id="context">
-                    <textarea class="form-control" placeholder="게시글을 작성해주세요." id="floatingTextarea2"
-                        name="post"></textarea>
+            <div class="create_">
+                <div class="create_input">
+                    <div>
+                        <input type="text" name="title" id="title" placeholder="title">
+                    </div>
+                    <div>
+                        <input type="file" name="imgfile" id="imgfile" placeholder="imgfile">
+                    </div>
+                    <div>
+                        <input type="text" name="context" id="context" placeholder="context">
+                    </div>
                 </div>
 
                 <hr>
 
                 <div class="form-actions">
-                    <button type="button" class="btn_create_article" onclick="createArticle()">등록하기</button>
+                    <button type="button" class="btn_create_article" onclick="postCreate()">등록하기</button>
                     <a href="/main.html" class="btn_cancel">취소하기</a>
                 </div>
             </form>

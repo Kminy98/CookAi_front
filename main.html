@@ -8,6 +8,7 @@
     <title>cookai</title>
     <script src="scripts/api.js"></script>
     <script src="scripts/mypage.js"></script>
+    <script src="scripts/myapi.js"></script>
     <link href="styles/style.css" rel="stylesheet" />
 </head>
 
@@ -37,7 +38,7 @@
                         <div class="nav_sign" id="loggedInContainer">
                             <div class="href_a">
                                 <div class="sign_a" id="article_admin">
-                                    <a href="article_admin.html">게시글 보기</a>
+                                    <a href="article_list.html">게시글 보기</a>
                                 </div>
                                 <div class="href_a" id="href_right">
                                     <div class="sign_a">
@@ -74,14 +75,18 @@
 
     <!-- 검색 -->
     <div class="container">
-        <form action="https://www.google.com/search" method="GET" class="search-form">
-            <label for="file" class="file-label"></label>
+        <div>
+            <img id="preview" />
+        </div>
+        <form>
+            <label for="imgfile" class="file-label"></label>
             <div class="file-input-wrapper">
-                <input type="file" name="file" id="file" class="file-input">
-                <span class="file-button">사진 선택</span>
-                <span class="file-name">배고프다, 뭐먹지?</span>
+                <!-- <input type="file" name="file" id="imgfile" class="file-input"> -->
+                <!-- <span class="file-button">파일 선택</span> -->
+                <input class="form-control" type="file" id="imgfile" accept="image/*" style="margin-left: 20px;" onchange="readURL(this);">
+                <!-- <span class="file-name">오늘의 요리는?</span> -->
             </div>
-            <input type="submit" value="검색" class="search-btn">
+                <input type="button" value="검색" onclick="postImage()" class="search-btn">
         </form>
     </div>
 

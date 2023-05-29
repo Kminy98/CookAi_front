@@ -191,3 +191,24 @@ async function EnterSignup() {
         saveMail();
     }
 }
+
+async function fetchRecipes() {
+    const response = await fetch("해당 API URL", {
+        headers: {
+            'content-type': 'application/json',
+            // 필요한 경우 인증 헤더 추가. 예: 'Authorization': `Bearer ${access_token}`
+        },
+        method: 'GET',
+    });
+
+    if (response.ok) {
+        const recipes = await response.json();
+        console.log(recipes);
+        // 이후 필요한 작업 수행
+    } else {
+        console.error("Failed to fetch recipes.");
+    }
+}
+
+// fetchRecipes 함수 호출 예시
+// fetchRecipes();
